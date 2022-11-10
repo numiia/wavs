@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.options.json",
+  "include": [
+    "microservices/**/*",
+    "apps/**/*"
+  ],
+  "exclude": [
+    "**/.cache/**/*",
+    "**/.next/**/*",
+    "**/build/**/*",
+    "**/dist/**/*",
+    "**/node_modules/**/*"
+  ]
+}

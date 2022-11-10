@@ -1,6 +1,10 @@
 # wavs
 
-Unique platform inspired by twitter and discord to create communities.
+Unique platform inspired by twitter and discord to create communities
+
+## Disclaimer
+
+This project is currently in the planning and very early stages
 
 ## Architecture
 

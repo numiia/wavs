@@ -1,0 +1,19 @@
+# Dependency directories
+node_modules
+
+# Directories
+.next
+dist
+
+# Environment
+.env
+
+# VSCode
+!.vscode/settings.json
+apps/*/.vscode/*
+.vscode/*
+
+# Others
+next-env.d.ts
+.turbo
+logs

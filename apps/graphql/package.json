@@ -1,0 +1,33 @@
+{
+  "name": "@wavs/graphql",
+  "version": "1.0.0",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "nest build",
+    "start": "nest start",
+    "start:dev": "nest start --watch"
+  },
+  "dependencies": {
+    "@apollo/subgraph": "^2.1.4",
+    "@nestjs/common": "^9.0.0",
+    "@nestjs/core": "^9.0.0",
+    "@nestjs/graphql": "^10.1.6",
+    "@nestjs/mercurius": "^10.1.6",
+    "@nestjs/platform-fastify": "^9.2.0",
+    "fastify": "^4.9.2",
+    "graphql": "^16.6.0",
+    "mercurius": "^10.5.1",
+    "reflect-metadata": "^0.1.13",
+    "rimraf": "^3.0.2",
+    "rxjs": "^7.2.0"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^9.0.0",
+    "@nestjs/schematics": "^9.0.0",
+    "@nestjs/testing": "^9.0.0",
+    "source-map-support": "^0.5.20",
+    "ts-loader": "^9.2.3",
+    "ts-node": "^10.0.0",
+    "tsconfig-paths": "4.1.0"
+  }
+}

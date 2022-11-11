@@ -2,7 +2,7 @@
   "name": "wavs",
   "private": true,
   "workspaces": [
-    "microservices/*",
+    "services/*",
     "apps/*"
   ],
   "scripts": {

@@ -1,6 +1,60 @@
-export default function Home() {
+import Link from 'next/link';
+
+export default function Root() {
 	return (
 		<>
+			<header className="container flex items-center justify-between py-4">
+				<div className="flex gap-6 md:gap-10">
+					<Link href="/" className="flex items-center space-x-2">
+						<svg
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								fillRule="evenodd"
+								clipRule="evenodd"
+								d="M13 3H21V11H13V3ZM15 5H19V9H15V5Z"
+								fill="currentColor"
+							/>
+							<path
+								fillRule="evenodd"
+								clipRule="evenodd"
+								d="M17 21V13H11V7H3V21H17ZM9 9H5V13H9V9ZM5 19L5 15H9V19H5ZM11 19V15H15V19H11Z"
+								fill="currentColor"
+							/>
+						</svg>
+
+						<span className="hidden font-bold sm:inline-block">Protocol</span>
+					</Link>
+					<nav className="flex items-center gap-6 sm:gap-8">
+						<Link
+							href="#"
+							className="text-sm font-medium cursor-not-allowed opacity-60 hover:underline"
+						>
+							Developers
+						</Link>
+
+						<Link
+							href="#"
+							className="text-sm font-medium cursor-not-allowed opacity-60 hover:underline"
+						>
+							Home
+						</Link>
+					</nav>
+				</div>
+				<nav>
+					<Link
+						href="/signin"
+						className="relative inline-flex items-center px-6 py-2 text-sm font-medium text-white border border-transparent rounded-md bg-brand-500 hover:bg-brand-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2"
+					>
+						Sign in
+					</Link>
+				</nav>
+			</header>
+
 			<section className="container grid items-center justify-center gap-6 pt-8 md:pt-12 lg:pt-24">
 				<div className="flex flex-col items-start gap-4 md:max-w-[800px]">
 					<h1 className="text-3xl font-black leading-[1.1] sm:text-4xl md:text-6xl">
@@ -12,8 +66,8 @@ export default function Home() {
 				</div>
 				<div className="flex gap-4">
 					<a
-						className="relative inline-flex h-11 items-center rounded-md border border-transparent bg-brand-500 px-8 py-2 font-medium text-white hover:bg-brand-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2"
-						href="/login"
+						className="relative inline-flex items-center px-8 py-2 font-medium text-white border border-transparent rounded-md h-11 bg-brand-500 hover:bg-brand-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2"
+						href="/signin"
 					>
 						Get Started
 						<svg
@@ -23,10 +77,10 @@ export default function Home() {
 							viewBox="0 0 24 24"
 							fill="none"
 							stroke="currentColor"
-							stroke-width="2"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							className="ml-2 h-4 w-4"
+							strokeWidth="2"
+							strokeLinecap="round"
+							strokeLinejoin="round"
+							className="w-4 h-4 ml-2"
 						>
 							<line x1="5" y1="12" x2="19" y2="12"></line>
 							<polyline points="12 5 19 12 12 19"></polyline>
@@ -36,20 +90,20 @@ export default function Home() {
 						href="https://github.com/numiia/wavs"
 						target="_blank"
 						rel="noreferrer"
-						className="relative inline-flex h-11 items-center rounded-md border border-slate-200 bg-white px-8 py-2 font-medium text-slate-900 transition-colors hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2"
+						className="relative inline-flex items-center px-8 py-2 font-medium transition-colors bg-white border rounded-md h-11 border-slate-200 text-slate-900 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2"
 					>
 						GitHub
 					</a>
 				</div>
 			</section>
 
-			<div className="md:py-18 container py-12 lg:py-24">
+			<div className="container py-12 md:py-18 lg:py-24">
 				<hr className="border-slate-100" />
 			</div>
 
 			<section className="container grid justify-center gap-6">
 				<div className="grid justify-center gap-4 sm:grid-cols-2 md:max-w-[860px] md:grid-cols-3">
-					<div className="relative overflow-hidden rounded-lg border border-slate-100 bg-white p-2 shadow-2xl">
+					<div className="relative p-2 overflow-hidden bg-white border rounded-lg shadow-2xl border-slate-100">
 						<div className="flex h-[180px] flex-col justify-between rounded-md bg-[#61DAFB]/20 p-6">
 							<svg
 								width="24"
@@ -57,7 +111,7 @@ export default function Home() {
 								viewBox="0 0 24 24"
 								fill="none"
 								xmlns="http://www.w3.org/2000/svg"
-								className="-ml-2 h-12 w-12"
+								className="w-12 h-12 -ml-2"
 							>
 								<path
 									fillRule="evenodd"
@@ -79,7 +133,7 @@ export default function Home() {
 						</div>
 					</div>
 
-					<div className="relative overflow-hidden rounded-lg border border-slate-100 bg-white p-2 shadow-2xl">
+					<div className="relative p-2 overflow-hidden bg-white border rounded-lg shadow-2xl border-slate-100">
 						<div className="flex h-[180px] flex-col justify-between rounded-md bg-[#29d7c4]/20 p-6">
 							<svg
 								width="24"
@@ -87,7 +141,7 @@ export default function Home() {
 								viewBox="0 0 24 24"
 								fill="none"
 								xmlns="http://www.w3.org/2000/svg"
-								className="-ml-2 h-12 w-12"
+								className="w-12 h-12 -ml-2"
 							>
 								<path
 									fillRule="evenodd"
@@ -105,7 +159,7 @@ export default function Home() {
 						</div>
 					</div>
 
-					<div className="relative overflow-hidden rounded-lg border border-slate-100 bg-white p-2 shadow-2xl">
+					<div className="relative p-2 overflow-hidden bg-white border rounded-lg shadow-2xl border-slate-100">
 						<div className="flex h-[180px] flex-col justify-between rounded-md bg-[#f45e1e]/20 p-6">
 							<svg
 								width="24"
@@ -113,7 +167,7 @@ export default function Home() {
 								viewBox="0 0 24 24"
 								fill="none"
 								xmlns="http://www.w3.org/2000/svg"
-								className="-ml-2 h-12 w-12"
+								className="w-12 h-12 -ml-2"
 							>
 								<path
 									fillRule="evenodd"
